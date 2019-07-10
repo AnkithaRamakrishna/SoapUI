@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="medicareSupplier" resourceRoot="" defaultScriptLanguage="Groovy" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" id="afb394a0-53f9-4f1f-a575-5e82b9a4a814" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="MediCareSupplierSoap12" type="wsdl" bindingName="{http://www.webservicex.net/}MediCareSupplierSoap12" soapVersion="1_2" anonymous="optional" definition="http://www.webservicex.net/medicareSupplier.asmx?WSDL" id="a49ffcc3-d2cf-40b8-9ddb-f9044a622505" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT"/><con:endpoints><con:endpoint>http://www.webservicex.net/medicareSupplier.asmx</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://www.webservicex.net/GetSupplierByCity" name="GetSupplierByCity" bindingOperationName="GetSupplierByCity" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="96f908cc-b9bc-4698-b9d0-f8b1f51ba035"><con:settings/><con:call name="Request 1" id="d759f178-f427-4391-b303-399d89e5c4a8"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/medicareSupplier.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webservicex.net/">
+   <soap:Header/>
+   <soap:Body>
+      <web:GetSupplierByCity>
+         <!--Optional:-->
+         <web:City>?</web:City>
+      </web:GetSupplierByCity>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webservicex.net/MediCareSupplierSoap/GetSupplierByCityRequest"/></con:call></con:operation><con:operation isOneWay="false" action="http://www.webservicex.net/GetSupplierBySupplyType" name="GetSupplierBySupplyType" bindingOperationName="GetSupplierBySupplyType" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="ed30f97b-b1d6-4df9-8c80-36b071e1ecbb"><con:settings/><con:call name="Request 1" id="124d8ce5-1a52-4a30-88ff-ab0ba1bdaf09"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/medicareSupplier.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webservicex.net/">
+   <soap:Header/>
+   <soap:Body>
+      <web:GetSupplierBySupplyType>
+         <!--Optional:-->
+         <web:description>?</web:description>
+      </web:GetSupplierBySupplyType>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webservicex.net/MediCareSupplierSoap/GetSupplierBySupplyTypeRequest"/></con:call></con:operation><con:operation isOneWay="false" action="http://www.webservicex.net/GetSupplierByZipCode" name="GetSupplierByZipCode" bindingOperationName="GetSupplierByZipCode" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="47f8965c-56cf-480e-b7a6-e88fd00c2482"><con:settings/><con:call name="Request 1" id="e3e71fc7-9937-426a-8069-0c8d8cfb05f6"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/medicareSupplier.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webservicex.net/">
+   <soap:Header/>
+   <soap:Body>
+      <web:GetSupplierByZipCode>
+         <!--Optional:-->
+         <web:zip>?</web:zip>
+      </web:GetSupplierByZipCode>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webservicex.net/MediCareSupplierSoap/GetSupplierByZipCodeRequest"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="MediCareSupplierSoap" type="wsdl" bindingName="{http://www.webservicex.net/}MediCareSupplierSoap" soapVersion="1_1" anonymous="optional" definition="http://www.webservicex.net/medicareSupplier.asmx?WSDL" id="b1d682e6-bdd9-4367-a29f-9a06fca733c0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://www.webservicex.net/medicareSupplier.asmx?WSDL"><con:part><con:url>http://www.webservicex.net/medicareSupplier.asmx?WSDL</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://www.webservicex.net/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.webservicex.net/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>This section provides names, addresses, and contact information for suppliers that provide services or products under the Medicare program. A supplier is an individual or entity that has agreed to provide health care equipment, items, or services under Medicare. A supplier may provide items such as: Durable Medical Equipment (wheelchairs, walkers, oxygen), Prosthetics (artificial limb replacements or dentures) or Orthotics (mechanical devices used to assist in mobility or supplement the joints and limbs). In addition, a type of supplier can also be Pharmacy/Drug Stores and Optometry/Opticians.This Supplier Directory lists Medicare enrolled pharmacies and suppliers.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.webservicex.net/">
+      <s:element name="GetSupplierByZipCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="zip" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSupplierByZipCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSupplierByZipCodeResult" type="s:boolean"/>
+            <s:element minOccurs="1" maxOccurs="1" name="SupplierDataLists" type="tns:SupplierDataList"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SupplierDataList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SupplierDatas" type="tns:ArrayOfSupplierData"/>
+          <s:element minOccurs="1" maxOccurs="1" name="TotalRecords" type="s:int"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSupplierData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SupplierData" type="tns:SupplierData"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SupplierData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SupplierNumber" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Address1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Address2" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ZipPlus4" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Telephone" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="IsSupplierParticipating" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSupplierByCity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSupplierByCityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSupplierByCityResult" type="s:boolean"/>
+            <s:element minOccurs="1" maxOccurs="1" name="SupplierDataLists" type="tns:SupplierDataList"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSupplierBySupplyType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSupplierBySupplyTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSupplierBySupplyTypeResult" type="s:boolean"/>
+            <s:element minOccurs="1" maxOccurs="1" name="SupplierDataLists" type="tns:SupplierDataList"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetSupplierByZipCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSupplierByZipCode"/>
+  </wsdl:message>
+  <wsdl:message name="GetSupplierByZipCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSupplierByZipCodeResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetSupplierByCitySoapIn">
+    <wsdl:part name="parameters" element="tns:GetSupplierByCity"/>
+  </wsdl:message>
+  <wsdl:message name="GetSupplierByCitySoapOut">
+    <wsdl:part name="parameters" element="tns:GetSupplierByCityResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetSupplierBySupplyTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSupplierBySupplyType"/>
+  </wsdl:message>
+  <wsdl:message name="GetSupplierBySupplyTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSupplierBySupplyTypeResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="MediCareSupplierSoap">
+    <wsdl:operation name="GetSupplierByZipCode">
+      <wsdl:documentation>Get Supplier details by Zip Code</wsdl:documentation>
+      <wsdl:input message="tns:GetSupplierByZipCodeSoapIn"/>
+      <wsdl:output message="tns:GetSupplierByZipCodeSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplierByCity">
+      <wsdl:documentation>Get Supplier details by City</wsdl:documentation>
+      <wsdl:input message="tns:GetSupplierByCitySoapIn"/>
+      <wsdl:output message="tns:GetSupplierByCitySoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplierBySupplyType">
+      <wsdl:documentation>Get Supplier details by Supply Type</wsdl:documentation>
+      <wsdl:input message="tns:GetSupplierBySupplyTypeSoapIn"/>
+      <wsdl:output message="tns:GetSupplierBySupplyTypeSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MediCareSupplierHttpGet"/>
+  <wsdl:portType name="MediCareSupplierHttpPost"/>
+  <wsdl:binding name="MediCareSupplierSoap" type="tns:MediCareSupplierSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetSupplierByZipCode">
+      <soap:operation soapAction="http://www.webservicex.net/GetSupplierByZipCode" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplierByCity">
+      <soap:operation soapAction="http://www.webservicex.net/GetSupplierByCity" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplierBySupplyType">
+      <soap:operation soapAction="http://www.webservicex.net/GetSupplierBySupplyType" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MediCareSupplierSoap12" type="tns:MediCareSupplierSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetSupplierByZipCode">
+      <soap12:operation soapAction="http://www.webservicex.net/GetSupplierByZipCode" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplierByCity">
+      <soap12:operation soapAction="http://www.webservicex.net/GetSupplierByCity" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplierBySupplyType">
+      <soap12:operation soapAction="http://www.webservicex.net/GetSupplierBySupplyType" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MediCareSupplierHttpGet" type="tns:MediCareSupplierHttpGet">
+    <http:binding verb="GET"/>
+  </wsdl:binding>
+  <wsdl:binding name="MediCareSupplierHttpPost" type="tns:MediCareSupplierHttpPost">
+    <http:binding verb="POST"/>
+  </wsdl:binding>
+  <wsdl:service name="MediCareSupplier">
+    <wsdl:documentation>This section provides names, addresses, and contact information for suppliers that provide services or products under the Medicare program. A supplier is an individual or entity that has agreed to provide health care equipment, items, or services under Medicare. A supplier may provide items such as: Durable Medical Equipment (wheelchairs, walkers, oxygen), Prosthetics (artificial limb replacements or dentures) or Orthotics (mechanical devices used to assist in mobility or supplement the joints and limbs). In addition, a type of supplier can also be Pharmacy/Drug Stores and Optometry/Opticians.This Supplier Directory lists Medicare enrolled pharmacies and suppliers.</wsdl:documentation>
+    <wsdl:port name="MediCareSupplierSoap" binding="tns:MediCareSupplierSoap">
+      <soap:address location="http://www.webservicex.net/medicareSupplier.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="MediCareSupplierSoap12" binding="tns:MediCareSupplierSoap12">
+      <soap12:address location="http://www.webservicex.net/medicareSupplier.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="MediCareSupplierHttpGet" binding="tns:MediCareSupplierHttpGet">
+      <http:address location="http://www.webservicex.net/medicareSupplier.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="MediCareSupplierHttpPost" binding="tns:MediCareSupplierHttpPost">
+      <http:address location="http://www.webservicex.net/medicareSupplier.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://www.webservicex.net/medicareSupplier.asmx</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://www.webservicex.net/GetSupplierByCity" name="GetSupplierByCity" bindingOperationName="GetSupplierByCity" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="ec214c93-68c8-445e-9aad-ec8bb896121c"><con:settings/><con:call name="Request 1" id="5c249b4e-1ca6-4e0e-9a14-1ef505264fd4"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/medicareSupplier.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webservicex.net/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetSupplierByCity>
+         <!--Optional:-->
+         <web:City>?</web:City>
+      </web:GetSupplierByCity>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webservicex.net/GetSupplierByCity"/></con:call></con:operation><con:operation isOneWay="false" action="http://www.webservicex.net/GetSupplierBySupplyType" name="GetSupplierBySupplyType" bindingOperationName="GetSupplierBySupplyType" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="9d26cb19-9c22-476c-845c-629195712c20"><con:settings/><con:call name="Request 1" id="3db9168b-42c1-40c8-a68a-f4ac72d7e2fa"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/medicareSupplier.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webservicex.net/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetSupplierBySupplyType>
+         <!--Optional:-->
+         <web:description>?</web:description>
+      </web:GetSupplierBySupplyType>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webservicex.net/GetSupplierBySupplyType"/></con:call></con:operation><con:operation isOneWay="false" action="http://www.webservicex.net/GetSupplierByZipCode" name="GetSupplierByZipCode" bindingOperationName="GetSupplierByZipCode" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="c65fe8a4-dd6f-4177-9fc7-6ece20c72abd"><con:settings/><con:call name="Request 1" id="41de2902-4ee9-4e16-a7f0-07109621aaf2"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/medicareSupplier.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webservicex.net/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetSupplierByZipCode>
+         <!--Optional:-->
+         <web:zip>?</web:zip>
+      </web:GetSupplierByZipCode>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webservicex.net/GetSupplierByZipCode"/></con:call></con:operation></con:interface><con:testSuite name="TestSuite 1" id="a4bfca72-5655-4cb8-a7d0-63542cf9a276"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true" id="1eba42e8-b803-4b34-89c2-130403f9f159"><con:settings/><con:testStep type="request" name="Test Request" id="7f12e30f-bb27-45de-82bd-69ac67b3d6fc"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MediCareSupplierSoap12</con:interface><con:operation>GetSupplierByCity</con:operation><con:request name="Test Request" id="66005e9d-9517-4f6c-9be0-48be35737f91"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/medicareSupplier.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webservicex.net/">
+   <soap:Header/>
+   <soap:Body>
+    <GetSupplierByCity xmlns="http://www.webservicex.net/">
+      <City>NEW YORK</City>
+    </GetSupplierByCity>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="c09f95fd-d5a8-42fd-abda-130b51f3bd2f"/><con:assertion type="XQuery Match" name="XQuery Match" id="7c638e7e-47c4-4230-aab6-be83b140c8b4"><con:configuration><path>declare namespace ns1='http://www.webservicex.net/';
+declare namespace soap='http://www.w3.org/2003/05/soap-envelope';
+
+&lt;MyResult>
+{
+for $x in //ns1:GetSupplierByCityResponse/ns1:SupplierDataLists/ns1:SupplierDatas/ns1:SupplierData
+return &lt;SupplierNumber>{data($x/ns1:SupplierNumber)}&lt;/SupplierNumber>
+}
+&lt;/MyResult></path><content><![CDATA[<MyResult>
+  <SupplierNumber>0127051883</SupplierNumber>
+  <SupplierNumber>0132600348</SupplierNumber>
+  <SupplierNumber>0133130001</SupplierNumber>
+  <SupplierNumber>0142190001</SupplierNumber>
+  <SupplierNumber>0147090001</SupplierNumber>
+  <SupplierNumber>0147980001</SupplierNumber>
+  <SupplierNumber>0147980001</SupplierNumber>
+  <SupplierNumber>0151600001</SupplierNumber>
+  <SupplierNumber>0157220001</SupplierNumber>
+  <SupplierNumber>0161890001</SupplierNumber>
+  <SupplierNumber>0180150426</SupplierNumber>
+  <SupplierNumber>0180150447</SupplierNumber>
+  <SupplierNumber>0209220001</SupplierNumber>
+  <SupplierNumber>0209220001</SupplierNumber>
+  <SupplierNumber>0209220001</SupplierNumber>
+  <SupplierNumber>0215790001</SupplierNumber>
+  <SupplierNumber>0219060001</SupplierNumber>
+  <SupplierNumber>0219060001</SupplierNumber>
+  <SupplierNumber>0226300001</SupplierNumber>
+  <SupplierNumber>0226940001</SupplierNumber>
+  <SupplierNumber>0235510001</SupplierNumber>
+  <SupplierNumber>0235510001</SupplierNumber>
+  <SupplierNumber>0237050001</SupplierNumber>
+  <SupplierNumber>0127051891</SupplierNumber>
+  <SupplierNumber>0243370001</SupplierNumber>
+  <SupplierNumber>0243370001</SupplierNumber>
+  <SupplierNumber>0256270002</SupplierNumber>
+  <SupplierNumber>0256270002</SupplierNumber>
+  <SupplierNumber>0131170001</SupplierNumber>
+  <SupplierNumber>0131930001</SupplierNumber>
+  <SupplierNumber>0131930001</SupplierNumber>
+  <SupplierNumber>0132500001</SupplierNumber>
+  <SupplierNumber>0132500001</SupplierNumber>
+  <SupplierNumber>0132600473</SupplierNumber>
+  <SupplierNumber>0147110001</SupplierNumber>
+  <SupplierNumber>0147110001</SupplierNumber>
+  <SupplierNumber>0150410001</SupplierNumber>
+  <SupplierNumber>0150410001</SupplierNumber>
+  <SupplierNumber>0174700001</SupplierNumber>
+  <SupplierNumber>0179360001</SupplierNumber>
+  <SupplierNumber>0180150429</SupplierNumber>
+  <SupplierNumber>0180150700</SupplierNumber>
+  <SupplierNumber>0180150725</SupplierNumber>
+  <SupplierNumber>0180150728</SupplierNumber>
+  <SupplierNumber>0180150735</SupplierNumber>
+  <SupplierNumber>0180150790</SupplierNumber>
+  <SupplierNumber>0199300001</SupplierNumber>
+  <SupplierNumber>0201720001</SupplierNumber>
+  <SupplierNumber>0201720001</SupplierNumber>
+  <SupplierNumber>0203210001</SupplierNumber>
+  <SupplierNumber>0203210001</SupplierNumber>
+  <SupplierNumber>0240620001</SupplierNumber>
+  <SupplierNumber>0317640001</SupplierNumber>
+  <SupplierNumber>0317640001</SupplierNumber>
+  <SupplierNumber>0317640002</SupplierNumber>
+  <SupplierNumber>0317640002</SupplierNumber>
+  <SupplierNumber>0320750001</SupplierNumber>
+  <SupplierNumber>0324870001</SupplierNumber>
+  <SupplierNumber>0251550001</SupplierNumber>
+  <SupplierNumber>0261380001</SupplierNumber>
+  <SupplierNumber>0262710001</SupplierNumber>
+  <SupplierNumber>0330250001</SupplierNumber>
+  <SupplierNumber>0335540001</SupplierNumber>
+  <SupplierNumber>0339980004</SupplierNumber>
+  <SupplierNumber>0273610001</SupplierNumber>
+  <SupplierNumber>0276660001</SupplierNumber>
+  <SupplierNumber>0276660001</SupplierNumber>
+  <SupplierNumber>0276660001</SupplierNumber>
+  <SupplierNumber>0280720001</SupplierNumber>
+  <SupplierNumber>0343100001</SupplierNumber>
+  <SupplierNumber>0361440001</SupplierNumber>
+  <SupplierNumber>0361440001</SupplierNumber>
+  <SupplierNumber>0369530002</SupplierNumber>
+  <SupplierNumber>0369530003</SupplierNumber>
+  <SupplierNumber>0380980004</SupplierNumber>
+  <SupplierNumber>0386580001</SupplierNumber>
+  <SupplierNumber>0386580001</SupplierNumber>
+  <SupplierNumber>0386580001</SupplierNumber>
+  <SupplierNumber>0386580001</SupplierNumber>
+  <SupplierNumber>0409920001</SupplierNumber>
+  <SupplierNumber>0409920001</SupplierNumber>
+  <SupplierNumber>0282933428</SupplierNumber>
+  <SupplierNumber>0282934254</SupplierNumber>
+  <SupplierNumber>0432520001</SupplierNumber>
+  <SupplierNumber>0440130001</SupplierNumber>
+  <SupplierNumber>0442480001</SupplierNumber>
+  <SupplierNumber>0442480001</SupplierNumber>
+  <SupplierNumber>0323160001</SupplierNumber>
+  <SupplierNumber>0329550001</SupplierNumber>
+  <SupplierNumber>0339460116</SupplierNumber>
+  <SupplierNumber>0339460116</SupplierNumber>
+  <SupplierNumber>0485620001</SupplierNumber>
+  <SupplierNumber>0485620001</SupplierNumber>
+  <SupplierNumber>0394940001</SupplierNumber>
+  <SupplierNumber>0394980001</SupplierNumber>
+  <SupplierNumber>0396950001</SupplierNumber>
+  <SupplierNumber>0414330004</SupplierNumber>
+  <SupplierNumber>0414330004</SupplierNumber>
+  <SupplierNumber>0514202416</SupplierNumber>
+  <SupplierNumber>0514202729</SupplierNumber>
+  <SupplierNumber>0514202813</SupplierNumber>
+  <SupplierNumber>0514202843</SupplierNumber>
+  <SupplierNumber>0514202875</SupplierNumber>
+  <SupplierNumber>0514202906</SupplierNumber>
+  <SupplierNumber>0514202917</SupplierNumber>
+  <SupplierNumber>0514202919</SupplierNumber>
+  <SupplierNumber>0514202993</SupplierNumber>
+  <SupplierNumber>0514203012</SupplierNumber>
+  <SupplierNumber>0514203116</SupplierNumber>
+  <SupplierNumber>0514203431</SupplierNumber>
+  <SupplierNumber>0514203469</SupplierNumber>
+  <SupplierNumber>0514203470</SupplierNumber>
+  <SupplierNumber>0514203586</SupplierNumber>
+  <SupplierNumber>0515010001</SupplierNumber>
+  <SupplierNumber>0442330001</SupplierNumber>
+  <SupplierNumber>0442720001</SupplierNumber>
+  <SupplierNumber>0535210001</SupplierNumber>
+  <SupplierNumber>0459400001</SupplierNumber>
+  <SupplierNumber>0462870001</SupplierNumber>
+  <SupplierNumber>0462870001</SupplierNumber>
+  <SupplierNumber>0462870001</SupplierNumber>
+  <SupplierNumber>0545950007</SupplierNumber>
+  <SupplierNumber>0545950007</SupplierNumber>
+  <SupplierNumber>0471720001</SupplierNumber>
+  <SupplierNumber>0471720001</SupplierNumber>
+  <SupplierNumber>0482160001</SupplierNumber>
+  <SupplierNumber>0568050199</SupplierNumber>
+  <SupplierNumber>0595090001</SupplierNumber>
+  <SupplierNumber>0597530001</SupplierNumber>
+  <SupplierNumber>0608680001</SupplierNumber>
+  <SupplierNumber>0622330001</SupplierNumber>
+  <SupplierNumber>0496780001</SupplierNumber>
+  <SupplierNumber>0636000096</SupplierNumber>
+  <SupplierNumber>0636000192</SupplierNumber>
+  <SupplierNumber>0648550001</SupplierNumber>
+  <SupplierNumber>0511150001</SupplierNumber>
+  <SupplierNumber>0673230001</SupplierNumber>
+  <SupplierNumber>0675850001</SupplierNumber>
+  <SupplierNumber>0514202661</SupplierNumber>
+  <SupplierNumber>0514202851</SupplierNumber>
+  <SupplierNumber>0514202866</SupplierNumber>
+  <SupplierNumber>0514202894</SupplierNumber>
+  <SupplierNumber>0514202900</SupplierNumber>
+  <SupplierNumber>0514202928</SupplierNumber>
+  <SupplierNumber>0514202934</SupplierNumber>
+  <SupplierNumber>0514202935</SupplierNumber>
+  <SupplierNumber>0514202998</SupplierNumber>
+  <SupplierNumber>0514203007</SupplierNumber>
+  <SupplierNumber>0514203016</SupplierNumber>
+  <SupplierNumber>0514203031</SupplierNumber>
+  <SupplierNumber>0514203071</SupplierNumber>
+  <SupplierNumber>0514203367</SupplierNumber>
+  <SupplierNumber>0514203378</SupplierNumber>
+  <SupplierNumber>0514203539</SupplierNumber>
+  <SupplierNumber>0514203544</SupplierNumber>
+  <SupplierNumber>0514203545</SupplierNumber>
+  <SupplierNumber>0514203547</SupplierNumber>
+  <SupplierNumber>0514203557</SupplierNumber>
+  <SupplierNumber>0527250001</SupplierNumber>
+  <SupplierNumber>0532240001</SupplierNumber>
+  <SupplierNumber>0703280001</SupplierNumber>
+  <SupplierNumber>0734800001</SupplierNumber>
+  <SupplierNumber>0734800001</SupplierNumber>
+  <SupplierNumber>0743680001</SupplierNumber>
+  <SupplierNumber>0746040001</SupplierNumber>
+  <SupplierNumber>0767900001</SupplierNumber>
+  <SupplierNumber>0550470001</SupplierNumber>
+  <SupplierNumber>0550470001</SupplierNumber>
+  <SupplierNumber>0779740001</SupplierNumber>
+  <SupplierNumber>0568050107</SupplierNumber>
+  <SupplierNumber>0817650001</SupplierNumber>
+  <SupplierNumber>0834620001</SupplierNumber>
+  <SupplierNumber>0568050194</SupplierNumber>
+  <SupplierNumber>0838530001</SupplierNumber>
+  <SupplierNumber>0852950001</SupplierNumber>
+  <SupplierNumber>0862430001</SupplierNumber>
+  <SupplierNumber>0865470001</SupplierNumber>
+  <SupplierNumber>0870200001</SupplierNumber>
+  <SupplierNumber>0875450001</SupplierNumber>
+  <SupplierNumber>0876600001</SupplierNumber>
+  <SupplierNumber>0880860001</SupplierNumber>
+  <SupplierNumber>0881680001</SupplierNumber>
+  <SupplierNumber>0893550001</SupplierNumber>
+  <SupplierNumber>0895570001</SupplierNumber>
+  <SupplierNumber>0904030001</SupplierNumber>
+  <SupplierNumber>0910910001</SupplierNumber>
+  <SupplierNumber>0634520001</SupplierNumber>
+  <SupplierNumber>0934950001</SupplierNumber>
+  <SupplierNumber>0972590001</SupplierNumber>
+  <SupplierNumber>0981100001</SupplierNumber>
+  <SupplierNumber>0647350001</SupplierNumber>
+  <SupplierNumber>0658030001</SupplierNumber>
+  <SupplierNumber>0659380001</SupplierNumber>
+  <SupplierNumber>0659380001</SupplierNumber>
+  <SupplierNumber>0666510001</SupplierNumber>
+  <SupplierNumber>0682000070</SupplierNumber>
+  <SupplierNumber>0682000070</SupplierNumber>
+  <SupplierNumber>1029250001</SupplierNumber>
+  <SupplierNumber>1029250002</SupplierNumber>
+  <SupplierNumber>1029250003</SupplierNumber>
+  <SupplierNumber>1029250008</SupplierNumber>
+  <SupplierNumber>1029250009</SupplierNumber>
+  <SupplierNumber>1029250010</SupplierNumber>
+  <SupplierNumber>1029250012</SupplierNumber>
+  <SupplierNumber>1029250017</SupplierNumber>
+  <SupplierNumber>1029250018</SupplierNumber>
+  <SupplierNumber>1029250019</SupplierNumber>
+  <SupplierNumber>1029250021</SupplierNumber>
+  <SupplierNumber>1029250023</SupplierNumber>
+  <SupplierNumber>1029250024</SupplierNumber>
+  <SupplierNumber>1029250029</SupplierNumber>
+  <SupplierNumber>1029250030</SupplierNumber>
+  <SupplierNumber>1029250032</SupplierNumber>
+  <SupplierNumber>1029250033</SupplierNumber>
+  <SupplierNumber>1029250038</SupplierNumber>
+  <SupplierNumber>1029250039</SupplierNumber>
+  <SupplierNumber>1029250040</SupplierNumber>
+  <SupplierNumber>1029250043</SupplierNumber>
+  <SupplierNumber>1029250048</SupplierNumber>
+  <SupplierNumber>1029250049</SupplierNumber>
+  <SupplierNumber>1029250050</SupplierNumber>
+  <SupplierNumber>1029250051</SupplierNumber>
+  <SupplierNumber>1029250052</SupplierNumber>
+  <SupplierNumber>1029250057</SupplierNumber>
+  <SupplierNumber>1029250058</SupplierNumber>
+  <SupplierNumber>1029250058</SupplierNumber>
+  <SupplierNumber>1029250061</SupplierNumber>
+  <SupplierNumber>1029250062</SupplierNumber>
+  <SupplierNumber>1029250064</SupplierNumber>
+  <SupplierNumber>1029250071</SupplierNumber>
+  <SupplierNumber>1029250079</SupplierNumber>
+  <SupplierNumber>1029250080</SupplierNumber>
+  <SupplierNumber>1029250086</SupplierNumber>
+  <SupplierNumber>1029250088</SupplierNumber>
+  <SupplierNumber>1029250094</SupplierNumber>
+  <SupplierNumber>1029250105</SupplierNumber>
+  <SupplierNumber>1029250115</SupplierNumber>
+  <SupplierNumber>1029250127</SupplierNumber>
+  <SupplierNumber>1029250133</SupplierNumber>
+  <SupplierNumber>1029250134</SupplierNumber>
+  <SupplierNumber>1029250143</SupplierNumber>
+  <SupplierNumber>1029250145</SupplierNumber>
+  <SupplierNumber>1029250146</SupplierNumber>
+  <SupplierNumber>1029250153</SupplierNumber>
+  <SupplierNumber>1029250164</SupplierNumber>
+  <SupplierNumber>1029250166</SupplierNumber>
+  <SupplierNumber>1029250167</SupplierNumber>
+  <SupplierNumber>1029250174</SupplierNumber>
+  <SupplierNumber>1029250180</SupplierNumber>
+  <SupplierNumber>1029250188</SupplierNumber>
+  <SupplierNumber>1029250189</SupplierNumber>
+  <SupplierNumber>1029250197</SupplierNumber>
+  <SupplierNumber>1029250198</SupplierNumber>
+  <SupplierNumber>1029250199</SupplierNumber>
+  <SupplierNumber>1029250201</SupplierNumber>
+  <SupplierNumber>1029250206</SupplierNumber>
+  <SupplierNumber>1029250207</SupplierNumber>
+  <SupplierNumber>1029250220</SupplierNumber>
+  <SupplierNumber>1029250221</SupplierNumber>
+  <SupplierNumber>1029250229</SupplierNumber>
+  <SupplierNumber>1029250231</SupplierNumber>
+  <SupplierNumber>1029250236</SupplierNumber>
+  <SupplierNumber>1029250246</SupplierNumber>
+  <SupplierNumber>1029250248</SupplierNumber>
+  <SupplierNumber>1029250256</SupplierNumber>
+  <SupplierNumber>1029250260</SupplierNumber>
+  <SupplierNumber>1029250267</SupplierNumber>
+  <SupplierNumber>0683460001</SupplierNumber>
+  <SupplierNumber>0701030001</SupplierNumber>
+  <SupplierNumber>0701030001</SupplierNumber>
+  <SupplierNumber>0702270001</SupplierNumber>
+  <SupplierNumber>1048560001</SupplierNumber>
+  <SupplierNumber>1090450001</SupplierNumber>
+  <SupplierNumber>0741800001</SupplierNumber>
+  <SupplierNumber>0749390001</SupplierNumber>
+  <SupplierNumber>0774100001</SupplierNumber>
+  <SupplierNumber>1123100001</SupplierNumber>
+  <SupplierNumber>1131260030</SupplierNumber>
+  <SupplierNumber>1131260030</SupplierNumber>
+  <SupplierNumber>1134770001</SupplierNumber>
+  <SupplierNumber>1143630001</SupplierNumber>
+  <SupplierNumber>1143630001</SupplierNumber>
+  <SupplierNumber>1179640001</SupplierNumber>
+  <SupplierNumber>0837790001</SupplierNumber>
+  <SupplierNumber>0869270001</SupplierNumber>
+  <SupplierNumber>0882740001</SupplierNumber>
+  <SupplierNumber>0892410001</SupplierNumber>
+  <SupplierNumber>0936500001</SupplierNumber>
+  <SupplierNumber>0939180001</SupplierNumber>
+  <SupplierNumber>0940920001</SupplierNumber>
+  <SupplierNumber>1217190001</SupplierNumber>
+  <SupplierNumber>1221640001</SupplierNumber>
+  <SupplierNumber>1221640001</SupplierNumber>
+  <SupplierNumber>1223150010</SupplierNumber>
+  <SupplierNumber>1223150010</SupplierNumber>
+  <SupplierNumber>1227420001</SupplierNumber>
+  <SupplierNumber>1234880001</SupplierNumber>
+  <SupplierNumber>0964880001</SupplierNumber>
+  <SupplierNumber>1243070001</SupplierNumber>
+  <SupplierNumber>1002920001</SupplierNumber>
+  <SupplierNumber>1249810003</SupplierNumber>
+  <SupplierNumber>1022480001</SupplierNumber>
+  <SupplierNumber>1029250004</SupplierNumber>
+  <SupplierNumber>1029250005</SupplierNumber>
+  <SupplierNumber>1029250006</SupplierNumber>
+  <SupplierNumber>1029250007</SupplierNumber>
+  <SupplierNumber>1029250013</SupplierNumber>
+  <SupplierNumber>1029250014</SupplierNumber>
+  <SupplierNumber>1029250015</SupplierNumber>
+  <SupplierNumber>1029250016</SupplierNumber>
+  <SupplierNumber>1029250020</SupplierNumber>
+  <SupplierNumber>1029250025</SupplierNumber>
+  <SupplierNumber>1029250026</SupplierNumber>
+  <SupplierNumber>1029250027</SupplierNumber>
+  <SupplierNumber>1029250028</SupplierNumber>
+  <SupplierNumber>1029250034</SupplierNumber>
+  <SupplierNumber>1029250035</SupplierNumber>
+  <SupplierNumber>1029250037</SupplierNumber>
+  <SupplierNumber>1029250044</SupplierNumber>
+  <SupplierNumber>1029250044</SupplierNumber>
+  <SupplierNumber>1029250045</SupplierNumber>
+  <SupplierNumber>1029250046</SupplierNumber>
+  <SupplierNumber>1029250047</SupplierNumber>
+  <SupplierNumber>1029250053</SupplierNumber>
+  <SupplierNumber>1029250070</SupplierNumber>
+  <SupplierNumber>1029250091</SupplierNumber>
+  <SupplierNumber>1029250093</SupplierNumber>
+  <SupplierNumber>1029250099</SupplierNumber>
+  <SupplierNumber>1029250109</SupplierNumber>
+  <SupplierNumber>1029250111</SupplierNumber>
+  <SupplierNumber>1029250117</SupplierNumber>
+  <SupplierNumber>1029250119</SupplierNumber>
+  <SupplierNumber>1029250120</SupplierNumber>
+  <SupplierNumber>1029250121</SupplierNumber>
+  <SupplierNumber>1029250122</SupplierNumber>
+  <SupplierNumber>1029250123</SupplierNumber>
+  <SupplierNumber>1029250129</SupplierNumber>
+  <SupplierNumber>1029250131</SupplierNumber>
+  <SupplierNumber>1029250137</SupplierNumber>
+  <SupplierNumber>1029250147</SupplierNumber>
+  <SupplierNumber>1029250148</SupplierNumber>
+  <SupplierNumber>1029250149</SupplierNumber>
+  <SupplierNumber>1029250150</SupplierNumber>
+  <SupplierNumber>1029250156</SupplierNumber>
+  <SupplierNumber>1029250169</SupplierNumber>
+  <SupplierNumber>1029250171</SupplierNumber>
+  <SupplierNumber>1029250173</SupplierNumber>
+  <SupplierNumber>1029250179</SupplierNumber>
+  <SupplierNumber>1029250185</SupplierNumber>
+  <SupplierNumber>1029250194</SupplierNumber>
+  <SupplierNumber>1029250196</SupplierNumber>
+  <SupplierNumber>1029250202</SupplierNumber>
+  <SupplierNumber>1029250209</SupplierNumber>
+  <SupplierNumber>1029250213</SupplierNumber>
+  <SupplierNumber>1029250214</SupplierNumber>
+  <SupplierNumber>1029250219</SupplierNumber>
+  <SupplierNumber>1029250233</SupplierNumber>
+  <SupplierNumber>1029250242</SupplierNumber>
+  <SupplierNumber>1029250243</SupplierNumber>
+  <SupplierNumber>1029250249</SupplierNumber>
+  <SupplierNumber>1029250251</SupplierNumber>
+  <SupplierNumber>1029250254</SupplierNumber>
+  <SupplierNumber>1029250259</SupplierNumber>
+  <SupplierNumber>1029250263</SupplierNumber>
+  <SupplierNumber>1029250264</SupplierNumber>
+  <SupplierNumber>1029250265</SupplierNumber>
+  <SupplierNumber>1029250266</SupplierNumber>
+  <SupplierNumber>1258770002</SupplierNumber>
+  <SupplierNumber>1259320001</SupplierNumber>
+  <SupplierNumber>1259320001</SupplierNumber>
+  <SupplierNumber>1259320001</SupplierNumber>
+  <SupplierNumber>1259320001</SupplierNumber>
+  <SupplierNumber>1265240001</SupplierNumber>
+  <SupplierNumber>1265310001</SupplierNumber>
+  <SupplierNumber>1266800001</SupplierNumber>
+  <SupplierNumber>1271590001</SupplierNumber>
+  <SupplierNumber>1271620001</SupplierNumber>
+  <SupplierNumber>1075700001</SupplierNumber>
+  <SupplierNumber>1075940001</SupplierNumber>
+  <SupplierNumber>1102800001</SupplierNumber>
+  <SupplierNumber>1107410001</SupplierNumber>
+  <SupplierNumber>1136490001</SupplierNumber>
+  <SupplierNumber>1143490001</SupplierNumber>
+  <SupplierNumber>1293030001</SupplierNumber>
+  <SupplierNumber>1297390001</SupplierNumber>
+  <SupplierNumber>1302070002</SupplierNumber>
+  <SupplierNumber>1148150001</SupplierNumber>
+  <SupplierNumber>1148150001</SupplierNumber>
+  <SupplierNumber>1161410001</SupplierNumber>
+  <SupplierNumber>1161410001</SupplierNumber>
+  <SupplierNumber>1176640001</SupplierNumber>
+  <SupplierNumber>1188020001</SupplierNumber>
+  <SupplierNumber>1188020001</SupplierNumber>
+  <SupplierNumber>1324860001</SupplierNumber>
+  <SupplierNumber>1325540001</SupplierNumber>
+  <SupplierNumber>3862610001</SupplierNumber>
+  <SupplierNumber>3874790001</SupplierNumber>
+  <SupplierNumber>3904390001</SupplierNumber>
+  <SupplierNumber>3906120002</SupplierNumber>
+  <SupplierNumber>4004660001</SupplierNumber>
+  <SupplierNumber>4046180001</SupplierNumber>
+  <SupplierNumber>4046180001</SupplierNumber>
+  <SupplierNumber>4046180001</SupplierNumber>
+  <SupplierNumber>4046180001</SupplierNumber>
+  <SupplierNumber>4058290001</SupplierNumber>
+  <SupplierNumber>1195882478</SupplierNumber>
+  <SupplierNumber>1198620001</SupplierNumber>
+  <SupplierNumber>4126330001</SupplierNumber>
+  <SupplierNumber>4130950001</SupplierNumber>
+  <SupplierNumber>4145190001</SupplierNumber>
+  <SupplierNumber>1254450001</SupplierNumber>
+  <SupplierNumber>1261120001</SupplierNumber>
+  <SupplierNumber>1261120001</SupplierNumber>
+  <SupplierNumber>1262140001</SupplierNumber>
+  <SupplierNumber>1264960001</SupplierNumber>
+  <SupplierNumber>1269060001</SupplierNumber>
+  <SupplierNumber>1278130001</SupplierNumber>
+  <SupplierNumber>1278700001</SupplierNumber>
+  <SupplierNumber>1291140001</SupplierNumber>
+  <SupplierNumber>1293880001</SupplierNumber>
+  <SupplierNumber>1298410001</SupplierNumber>
+  <SupplierNumber>1299230001</SupplierNumber>
+  <SupplierNumber>1300880001</SupplierNumber>
+  <SupplierNumber>4355570001</SupplierNumber>
+  <SupplierNumber>4382690001</SupplierNumber>
+  <SupplierNumber>1300950001</SupplierNumber>
+  <SupplierNumber>1303120001</SupplierNumber>
+  <SupplierNumber>1303460001</SupplierNumber>
+  <SupplierNumber>1307010001</SupplierNumber>
+  <SupplierNumber>1307600001</SupplierNumber>
+  <SupplierNumber>1309570001</SupplierNumber>
+  <SupplierNumber>1318730001</SupplierNumber>
+  <SupplierNumber>1323270001</SupplierNumber>
+  <SupplierNumber>1323760001</SupplierNumber>
+  <SupplierNumber>1323950001</SupplierNumber>
+  <SupplierNumber>3878080001</SupplierNumber>
+  <SupplierNumber>4432760001</SupplierNumber>
+  <SupplierNumber>4441300001</SupplierNumber>
+  <SupplierNumber>4475650001</SupplierNumber>
+  <SupplierNumber>4523760001</SupplierNumber>
+  <SupplierNumber>4553210001</SupplierNumber>
+  <SupplierNumber>4563000001</SupplierNumber>
+  <SupplierNumber>4585370001</SupplierNumber>
+  <SupplierNumber>3903850001</SupplierNumber>
+  <SupplierNumber>3986050001</SupplierNumber>
+  <SupplierNumber>4046770001</SupplierNumber>
+  <SupplierNumber>4653850001</SupplierNumber>
+  <SupplierNumber>4653850001</SupplierNumber>
+  <SupplierNumber>4675850001</SupplierNumber>
+  <SupplierNumber>4687380001</SupplierNumber>
+  <SupplierNumber>4710730001</SupplierNumber>
+  <SupplierNumber>4719860001</SupplierNumber>
+  <SupplierNumber>4761870001</SupplierNumber>
+  <SupplierNumber>4096910001</SupplierNumber>
+  <SupplierNumber>4096910001</SupplierNumber>
+  <SupplierNumber>4799460001</SupplierNumber>
+  <SupplierNumber>4811650001</SupplierNumber>
+  <SupplierNumber>4225090001</SupplierNumber>
+  <SupplierNumber>4225090001</SupplierNumber>
+  <SupplierNumber>4228110001</SupplierNumber>
+  <SupplierNumber>4250610001</SupplierNumber>
+  <SupplierNumber>4250610001</SupplierNumber>
+  <SupplierNumber>4250610001</SupplierNumber>
+  <SupplierNumber>4251320001</SupplierNumber>
+  <SupplierNumber>4251320001</SupplierNumber>
+  <SupplierNumber>4251320001</SupplierNumber>
+  <SupplierNumber>4297080001</SupplierNumber>
+  <SupplierNumber>4886010001</SupplierNumber>
+  <SupplierNumber>4917530001</SupplierNumber>
+  <SupplierNumber>4920750001</SupplierNumber>
+  <SupplierNumber>4928200001</SupplierNumber>
+  <SupplierNumber>4944210001</SupplierNumber>
+  <SupplierNumber>4948450001</SupplierNumber>
+  <SupplierNumber>4948450008</SupplierNumber>
+  <SupplierNumber>4948450009</SupplierNumber>
+  <SupplierNumber>4955710001</SupplierNumber>
+  <SupplierNumber>4956760001</SupplierNumber>
+  <SupplierNumber>5020790001</SupplierNumber>
+  <SupplierNumber>5023560001</SupplierNumber>
+  <SupplierNumber>5034200001</SupplierNumber>
+  <SupplierNumber>5037870001</SupplierNumber>
+  <SupplierNumber>5053140001</SupplierNumber>
+  <SupplierNumber>5067700001</SupplierNumber>
+  <SupplierNumber>5071010001</SupplierNumber>
+  <SupplierNumber>5086430001</SupplierNumber>
+  <SupplierNumber>5090550001</SupplierNumber>
+  <SupplierNumber>5112990001</SupplierNumber>
+  <SupplierNumber>5115140001</SupplierNumber>
+  <SupplierNumber>5115140001</SupplierNumber>
+  <SupplierNumber>5118660001</SupplierNumber>
+  <SupplierNumber>5126460001</SupplierNumber>
+  <SupplierNumber>5127930001</SupplierNumber>
+  <SupplierNumber>5167550001</SupplierNumber>
+  <SupplierNumber>5188070001</SupplierNumber>
+  <SupplierNumber>4371100001</SupplierNumber>
+  <SupplierNumber>4401550001</SupplierNumber>
+  <SupplierNumber>4428910001</SupplierNumber>
+  <SupplierNumber>4464600001</SupplierNumber>
+  <SupplierNumber>4494510001</SupplierNumber>
+  <SupplierNumber>4498120001</SupplierNumber>
+  <SupplierNumber>4506030001</SupplierNumber>
+  <SupplierNumber>4565920001</SupplierNumber>
+  <SupplierNumber>4610820001</SupplierNumber>
+  <SupplierNumber>4642730001</SupplierNumber>
+  <SupplierNumber>4687830001</SupplierNumber>
+  <SupplierNumber>4756510001</SupplierNumber>
+  <SupplierNumber>4774380001</SupplierNumber>
+  <SupplierNumber>4823270001</SupplierNumber>
+  <SupplierNumber>4835400001</SupplierNumber>
+  <SupplierNumber>4839220001</SupplierNumber>
+  <SupplierNumber>4845970001</SupplierNumber>
+  <SupplierNumber>4849300001</SupplierNumber>
+  <SupplierNumber>4849300001</SupplierNumber>
+  <SupplierNumber>4854960001</SupplierNumber>
+  <SupplierNumber>4867120001</SupplierNumber>
+  <SupplierNumber>4905030001</SupplierNumber>
+  <SupplierNumber>4938390001</SupplierNumber>
+  <SupplierNumber>4938870001</SupplierNumber>
+  <SupplierNumber>4948450002</SupplierNumber>
+  <SupplierNumber>4948450004</SupplierNumber>
+  <SupplierNumber>4948450005</SupplierNumber>
+  <SupplierNumber>5037660001</SupplierNumber>
+  <SupplierNumber>5044530001</SupplierNumber>
+  <SupplierNumber>5050520001</SupplierNumber>
+  <SupplierNumber>5050520001</SupplierNumber>
+  <SupplierNumber>5059320001</SupplierNumber>
+  <SupplierNumber>5100380001</SupplierNumber>
+  <SupplierNumber>5121300001</SupplierNumber>
+  <SupplierNumber>5129800001</SupplierNumber>
+  <SupplierNumber>5130250001</SupplierNumber>
+  <SupplierNumber>5135400001</SupplierNumber>
+  <SupplierNumber>5135400001</SupplierNumber>
+  <SupplierNumber>5145510001</SupplierNumber>
+  <SupplierNumber>5157840001</SupplierNumber>
+  <SupplierNumber>5181230001</SupplierNumber>
+  <SupplierNumber>5199030001</SupplierNumber>
+</MyResult>]]></content><allowWildcards>false</allowWildcards></con:configuration></con:assertion><con:assertion type="XPath Match" name="XPath Match" id="2f649180-834a-4f5f-b478-c6d75f8b5ee5"><con:configuration><path>declare namespace ns1='http://www.webservicex.net/';
+declare namespace soap='http://www.w3.org/2003/05/soap-envelope';
+
+//ns1:GetSupplierByCityResponse/ns1:SupplierDataLists/ns1:SupplierDatas/ns1:SupplierData[1]/ns1:SupplierNumber</path><content>0127051883</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XQuery Match" id="be0e0d12-dba8-46ec-8368-7fae87ae48bb"><con:configuration/></con:assertion><con:assertion type="XQuery Match" name="XQuery Match 11" id="5e69d478-4347-4ada-9bd2-2d5ae4d650a7"><con:configuration><path/><content/><allowWildcards>false</allowWildcards></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
